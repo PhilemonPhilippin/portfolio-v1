@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --color-russian-violet: #231942;
+  --color-platinum: #dee7e7;
+  --color-alice-blue: #f4faff;
+  --color-african-violet: #9f86c0;
+  --color-ultra-violet: #5e548e;
+  --color-light-black: #343434;
+  --font-roboto-serif: "Roboto Serif", serif;
+  --font-roboto: "Roboto", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-roboto-serif);
+  background-color: var(--color-light-black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: var(--font-roboto);
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.6rem;
+}
+h3 {
+  font-size: 1.4rem;
+}
+h4 {
+  font-size: 1.2rem;
+}
