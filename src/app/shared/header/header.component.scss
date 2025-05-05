@@ -32,7 +32,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--color-african-violet);
+  color: var(--color-primary);
 }
 
 .menu-toggle {
@@ -62,7 +62,7 @@ nav a:hover {
 
   nav {
     flex-direction: column;
-    background-color: var(--color-light-black);
+    background-color: var(--color-bg-black);
     padding: 1rem;
     gap: 1rem;
     transform: translateY(-100%);
@@ -81,6 +81,6 @@ nav a:hover {
   }
 
   .bg-black {
-    background-color: var(--color-light-black);
+    background-color: var(--color-bg-black);
   }
 }
