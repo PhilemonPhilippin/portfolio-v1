@@ -1,28 +1,88 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-:root {
-  --color-russian-violet: #231942;
-  --color-platinum: #dee7e7;
-  --color-alice-blue: #f4faff;
-  --color-african-violet: #9f86c0;
-  --color-ultra-violet: #5e548e;
+/* 
 
-  --color-primary: #3f7dad;
-  --color-secondary: #6b7280;
-  --color-white: #ffffff;
-  --color-bg-white: #ecf2f7;
-  --color-text-black: #212427;
+---------- BORDER RADIUS ----------
+
+4px / 8px / 20px
+
+---------- SPACING SYSTEM ----------
+
+5px / 10px / 15px / 20px / 25px / 30px / 40px / 50px / 60px / 70px / 80px / 90px / 100px / 125px / 150px / 200px / 250px / 300px / 400px / 500px
+
+----------- BREAKPOINTS -----------
+mobile-first (portrait phones)  : <576px
+breakpoint-sm (landscape phones) : 576px>
+breakpoint-md (tablets) : 768px>
+breakpoint-lg (desktops) : 992px>
+breakpoint-xl (large desktops) : 1200px>
+
+*/
+
+/* ----------------------- GLOBAL STYLES ----------------------- */
+
+:root {
+  --color-primary-base: #3f7dad;
+  --color-primary-tint: #9fbed6;
+  --color-primary-shade: #203f57;
+
+  --color-secondary-base: #3f334d;
+  --color-secondary-tint: #9f99a6;
+  --color-secondary-shade: #201a27;
+
+  --color-tertiary-base: #8fbc94;
+  --color-tertiary-tint: #c7deca;
+  --color-tertiary-shade: #485e4a;
+
+  --color-grey-base: #6b7280;
+  --color-grey-tint: #b5b9c0;
+  --color-grey-shade: #363940;
+
+  --color-dark-white: #ecf2f7;
+  --color-light-black: #212427;
   --color-bg-black: #343434;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
   --font-roboto-serif: "Roboto Serif", serif;
   --font-roboto: "Roboto", sans-serif;
+
+  --text-sm: 1.2rem;
+  --text-base: 1.6rem;
+  --text-paragraph: 2rem;
+  --text-h5: 2.4rem;
+  --text-h4: 3.2rem;
+  --text-h3: 4rem;
+  --text-h2: 4.8rem;
+  --text-h1: 6.2rem;
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+
+  --letter-spacing-tight: -2px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Mobile first */
+  /* 16px = 100% -> 6px = 37.5% */
+  font-size: 37.5%;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
   font-family: var(--font-roboto-serif);
-  background-color: var(--color-light-black);
+  color: var(--color-dark-white);
+  background-color: var(--color-bg-black);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
 }
 
 h1,
@@ -30,20 +90,102 @@ h2,
 h3,
 h4,
 h5,
-h6,
 button {
   font-family: var(--font-roboto);
+  font-weight: var(--font-weight-bold);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: var(--text-h1);
 }
+
 h2 {
-  font-size: 1.6rem;
+  font-size: var(--text-h2);
 }
+
 h3 {
-  font-size: 1.4rem;
+  font-size: var(--text-h3);
 }
+
 h4 {
-  font-size: 1.2rem;
+  font-size: var(--text-h4);
 }
+
+h5 {
+  font-size: var(--text-h5);
+}
+
+p {
+  font-size: var(--text-paragraph);
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: var(--text-base);
+  font-family: var(--font-roboto);
+  color: var(--color-dark-white);
+}
+
+a:hover {
+  color: var(--color-grey-base);
+}
+
+ul {
+  list-style: none;
+}
+
+span {
+  display: inline-block;
+}
+
+.small-text {
+  font-size: var(--text-sm);
+}
+
+/* ------------------ Global Media Queries ------------------ */
+
+@media (min-width: 576px) {
+  html {
+    /* Landscape phone */
+    /* 16px = 100% -> 7px = 43.75% */
+    font-size: 43.75%;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    /* Tablets */
+    /* 16px = 100% -> 8px = 50% */
+    font-size: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+    /* Desktops */
+    /* 16px = 100% -> 9px = 56.25% */
+    font-size: 56.25%;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    /* Large desktops */
+    /* 16px = 100% -> 10px = 62.5% */
+    font-size: 62.5%;
+  }
+}
+
+/* ----------------------- COMPONENTS ----------------------- */
+
+/* ----------------------- SECTIONS ----------------------- */

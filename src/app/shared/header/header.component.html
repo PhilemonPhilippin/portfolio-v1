@@ -1,8 +1,9 @@
 <div class="header">
   <header>
-    <button class="menu-toggle" [class.bg-black]="menuOpen" (click)="toggleMenu()">☰</button>
+    <a class="menu-toggle" [class.bg-black]="menuOpen" (click)="toggleMenu()"
+      >☰</a
+    >
     <nav [class.open]="menuOpen">
-      
       <a href="/">ABOUT ME</a>
       <a href="/">PROJECTS</a>
       <a href="/">CONTACT</a>

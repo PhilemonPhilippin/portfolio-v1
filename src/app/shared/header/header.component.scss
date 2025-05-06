@@ -3,84 +3,72 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
-  color: white;
-  min-height: 3.75rem;
+  z-index: 1;
+  min-height: 80px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  min-height: 60px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-  font-family: var(--font-roboto);
-}
-
-nav a:hover {
-  color: var(--color-primary);
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
 }
 
 .menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  font-size: var(--text-h4);
 }
 
-@media (max-width: 768px) {
+nav {
+  display: none;
+}
+
+nav a {
+  color: var(--color-white);
+  transition: color 0.3s ease;
+  font-size: var(--text-paragraph);
+}
+
+nav a:hover {
+  color: var(--color-grey-base);
+}
+
+.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 3rem;
+  background-color: var(--color-bg-black);
+}
+
+.bg-black {
+  background-color: var(--color-bg-black);
+}
+
+@media (min-width: 768px) {
   header {
-    margin: 1rem;
-    justify-content: start;
-    align-items: start;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
   header:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--color-bg-black);
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    min-height: 80px;
     background-color: rgba(0, 0, 0, 0);
   }
 
   .menu-toggle {
-    display: block;
-    margin: 0.5rem;
-  }
-
-  nav {
-    flex-direction: column;
-    background-color: var(--color-bg-black);
-    padding: 1rem;
-    gap: 1rem;
-    transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-
-  nav.open {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .bg-black {
-    background-color: var(--color-bg-black);
+    display: none;
   }
 }
