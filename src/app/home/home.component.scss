@@ -29,4 +29,12 @@
 .hero-text {
   text-align: center;
   color: var(--color-white);
+
+  h1 {
+    font-size: var(--text-h2);
+  }
+  h2 {
+    font-size: var(--text-h1);
+    font-style: italic;
+  }
 }

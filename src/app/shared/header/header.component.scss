@@ -9,12 +9,14 @@ header {
   flex-direction: row;
   justify-content: start;
   align-items: start;
+  margin: 1rem;
 }
 
 .menu-toggle {
   color: var(--color-white);
   padding: 1rem 2rem;
   font-size: var(--text-h4);
+  margin-right: 1.5rem;
 }
 
 nav {
@@ -45,11 +47,12 @@ nav a:hover {
   background-color: var(--color-bg-black);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin: auto;
   }
 
   header:hover {
